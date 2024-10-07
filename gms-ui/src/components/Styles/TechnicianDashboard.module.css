@@ -1,0 +1,218 @@
+/* Container */
+
+.container  {
+  max-width: 1100px; /* Adjusted width for consistency */
+  margin: auto; /* Centering the container properly */
+  padding: 60px; /* Space around the content */
+  background: linear-gradient(135deg, #9ed6caed, #154038ed); /* Smooth emerald green gradient */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Subtle shadow for elevation */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transition effects */
+}
+
+/* Hover effect for the container */
+.container:hover {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18); /* Deeper shadow on hover */
+  transform: translateY(-5px); /* Lift effect */
+}
+
+/* Title */
+.title {
+  font-size: 2.5rem; /* Title size */
+  margin-bottom: 40px; /* Space below the title */
+  text-align: center; /* Centering the text */
+  color: #0e4a3ded; /* Title color */
+  font-weight: 700; /* Bold font */
+}
+
+/* Form Styles */
+.form {
+  font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  
+  margin-bottom: 10px; /* Space below the form */
+}
+
+/* Label Styles */
+.label {
+  display: block; /* Block display */
+  margin-bottom: 12px; /* Space below label */
+  font-weight: 600; /* Bold font */
+  color: #054f38; /* Label color */
+  font-size: 1.2rem; /* Font size */
+}
+
+/* Input Styles */
+.input {
+  width: 100%; /* Full width */
+  padding: 20px; /* Space inside the input */
+  margin-bottom: 30px; /* Space below input */
+  border: 1.8px solid #e5f5e5; /* Soft border */
+  border-radius: 12px; /* Rounded corners */
+  font-size: 1.2rem; /* Font size */
+  background-color: #f8fdf8; /* Light green background */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+}
+
+/* Focus state for inputs */
+.input:focus {
+  border-color: #1d9884; /* Focus border color */
+  box-shadow: 0 0 8px rgba(80, 200, 120, 0.5); /* Soft shadow on focus */
+  outline: none; /* Removing the default outline */
+}
+/* Styles for the select dropdown */
+.select {
+  appearance: none; /* Removes default dropdown arrow */
+  padding: 12px 16px; /* Adds padding to make it bigger */
+  font-size: 16px; /* Increase font size */
+  background-color: #f1f1f1; /* Light background color */
+  border: 2px solid #ddd; /* Adds a border */
+  border-radius: 8px; /* Rounds the corners */
+  width: 100%; /* Make it take full width of the container */
+  max-width: 400px; /* Limits the maximum width */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover/focus */
+  cursor: pointer; /* Change cursor to pointer for button-like feel */
+}
+
+/* Styles for the select dropdown when hovered */
+.select:hover {
+  border-color: #4CAF50; /* Change border color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
+}
+
+/* Styles for the select dropdown when focused */
+.select:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #4CAF50; /* Green border on focus */
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.5); /* Slight glow on focus */
+}
+
+/* Styles for the buttons */
+.submitButton {
+  padding: 12px 20px; /* Add padding to the button */
+  font-size: 16px; /* Increase font size */
+  background-color: #19a095; /* Green background */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  border-radius: 8px; /* Round the button corners */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for the button */
+.submitButton:hover {
+  background-color: #165749; /* Slightly darker green on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
+}
+
+/* Margin adjustments for the button */
+.marginLeft {
+  margin-left: 10px; /* Adds space between the dropdown and the button */
+}
+
+
+/* Button Styles */
+.submitButton {
+  background-color: #0d412b; /* Emerald button */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 15px 40px; /* Spacious button */
+  border-radius: 12px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  font-size: 1.2rem; /* Font size */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+/* Hover state for buttons */
+.submitButton:hover {
+  background-color: #225b46; /* Darker green on hover */
+  transform: translateY(-4px); /* Lift effect */
+}
+
+.grievances {
+  border: 2px solid #128e79; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #70af95; /* Light background color */
+  padding: 15px; /* Padding inside the div */
+  margin-bottom: 20px; /* Space below each grievance block */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.grievanceItem {
+  margin-bottom: 10px; /* Space below each grievance item */
+  font-size: 18px; /* Increase font size for better readability */
+  color: #121212; /* Darker text color */
+}
+
+.grievanceItem strong {
+  color: #084e39; /* Custom color for strong text */
+  margin-right: 5px; /* Space between label and value */
+}
+
+
+/* Technician ID Input Box */
+#technicianId {
+  width: 100%; /* Full width */
+  padding: 24px; /* Spacious input */
+  border: 2px solid #e0f2e0; /* Light border */
+  border-radius: 16px; /* Rounded corners */
+  font-size: 1.3rem; /* Font size */
+  background-color: #45d1aa; /* Light greenish background */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Focus state for Technician ID */
+#technicianId:focus {
+  border-color: #66bb6a; /* Green border on focus */
+  box-shadow: 0 0 10px rgba(102, 187, 106, 0.5); /* Focus shadow */
+  outline: none; /* Remove default outline */
+}
+
+/* Hover state for Technician ID */
+#technicianId:hover {
+  border-color: #b2e0b2; /* Hover border color */
+  background-color: #d6f9e3; /* Light hover background */
+}
+
+/* Grievance List */
+ul {
+  list-style: none; /* Removing bullets */
+  padding: 0; /* Removing padding */
+}
+
+li {
+  padding: 20px; /* Space inside each item */
+  border: 1px solid #e0e0e0; /* Light border */
+  border-radius: 16px; /* Rounded corners */
+  margin-bottom: 25px; /* Space between list items */
+  background-color: #f9fcfa; /* Very light green background */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect for list items */
+li:hover {
+  background-color: #eaf8ed; /* Light green on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Soft shadow on hover */
+}
+
+/* Grievance details font styles */
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .container {
+    padding: 30px; /* Smaller padding on mobile */
+  }
+
+  .title {
+    font-size: 2rem; /* Smaller title */
+  }
+
+  .input,
+  #technician-id,
+  .submitButton {
+    font-size: 1rem; /* Smaller font size */
+    padding: 15px; /* Less padding */
+  }
+}

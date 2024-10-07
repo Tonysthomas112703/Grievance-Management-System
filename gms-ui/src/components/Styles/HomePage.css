@@ -1,0 +1,116 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e8e5e5; /* Light gray background */
+    color: #333;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    background-image: url("C:\Users\tonys\OneDrive\Desktop\React Tarento\gms-ui\src\components\Images\homepage.jpeg.jpg"); /* Make sure the image path is correct */
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    flex-direction: column;
+  }
+  
+  .hero-content h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-color: white;
+    color: rgb(165, 237, 224);
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #f8fffd;
+    font-size: 2rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+
+    
+  }
+  
+  .primary-button {
+    padding: 12px 40px;
+    border-radius: 25px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #094839ed;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .primary-button:hover {
+    background-color: #0c2b2c;
+  }
+  
+  /* Features Section */
+  .features-section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .features-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #11332ced;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .feature-item {
+    background-color: #1b4540ed;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .feature-item h3 {
+    font-size: 1.75rem;
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  .feature-item p {
+    font-size: 1rem;
+    color: white;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    background-color: #1b4540ed;
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  

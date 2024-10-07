@@ -1,0 +1,116 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Full height */
+  background: linear-gradient(135deg, #8db5aced, #9ed6caed); /* Emerald green gradient */
+  padding: 20px;
+  border-radius: 12px; /* Softer corners */
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #0e4a3ded; /* Darker emerald green for the title */
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px; /* Clean, spaced-out typography */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.border {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 35px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+  width: 100%;
+  max-width: 450px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth scaling effect */
+}
+
+.border:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700; /* Bold labels for clarity */
+  color: #0b4538ed; /* Dark emerald green for readable label color */
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #bdc3c7; /* Light gray border */
+  border-radius: 6px;
+  background-color: #f7f7f7; /* Soft, neutral background */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #2fb0a1; /* Lighter emerald green focus color */
+  box-shadow: 0 0 8px rgba(102, 187, 106, 0.3); /* Glow effect on focus */
+  outline: none;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth interactions */
+}
+
+.btn-primary {
+  background-color: #12b491ed; /* Lighter emerald green background */
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0c2b2c; /* Darker emerald green shade on hover */
+  transform: scale(1.05); /* Slight zoom */
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+.mt-5 {
+  margin-top: 3rem;
+}
+
+.alert {
+  margin-top: 20px;
+  color: #e74c3c;
+  font-weight: bold;
+  text-align: center;
+  background-color: #fce4e4; /* Light red background for alerts */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #e74c3c;
+  box-shadow: 0 2px 5px rgba(231, 76, 60, 0.1);
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2rem; /* Adjust title for smaller screens */
+  }
+
+  .border {
+    padding: 25px; /* Adjust padding on smaller screens */
+  }
+}

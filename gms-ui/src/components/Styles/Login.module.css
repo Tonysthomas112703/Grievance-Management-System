@@ -1,0 +1,113 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #154038ed, #9ed6caed); /* Gradient with emerald green */
+  padding: 20px;
+  border-radius: 12px; /* Softer corners */
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #feffffed; /* Darker emerald green for contrast */
+  font-weight: bold;
+  letter-spacing: 1.5px; /* Letter spacing for a more polished look */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+}
+
+.form {
+  width: 100%;
+  max-width: 450px; /* Slightly larger form width */
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 35px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* More noticeable shadow */
+  transition: transform 0.3s ease-in-out; /* Smooth scaling on hover */
+}
+
+.form:hover {
+  transform: translateY(-5px); /* Lifting effect on hover */
+}
+
+.formGroup {
+  margin-bottom: 20px; /* Increased space between fields */
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700; /* Bolder labels */
+  color: #0b4538ed; /* Darker emerald green */
+}
+
+.input, .select {
+  width: 100%;
+  padding: 12px; /* More padding for a better feel */
+  border: 1px solid #bdc3c7;
+  border-radius: 6px;
+  background-color: #f7f7f7; /* Light gray background for inputs */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Added transition for box-shadow */
+}
+
+.input:focus, .select:focus {
+  border-color: #2ba18c; /* Brighter emerald green focus color */
+  box-shadow: 0 0 8px rgba(102, 187, 106, 0.3); /* Glowing effect on focus */
+  outline: none;
+}
+
+.submitButton, .registerButton {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Added transform transition */
+}
+
+.submitButton {
+  background-color: #2e8371ed; /* Emerald green for submit button */
+  color: white;
+}
+
+.submitButton:hover {
+  background-color: #0c2b2c; /* Darker emerald green on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.registerButton {
+  background-color: #2e8371ed; /* Emerald green for register button */
+  color: white;
+  margin-top: 12px;
+}
+
+.registerButton:hover {
+  background-color: #0c2b2c; /* Darker emerald green on hover */
+  transform: scale(1.05);
+}
+
+.alert {
+  margin-top: 20px;
+  color: #e74c3c;
+  font-weight: bold;
+  text-align: center;
+  background-color: #fce4e4; /* Light red background for alerts */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #e74c3c;
+  box-shadow: 0 2px 5px rgba(231, 76, 60, 0.1);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .form {
+    max-width: 350px;
+  }
+}

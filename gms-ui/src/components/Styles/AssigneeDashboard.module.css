@@ -1,0 +1,138 @@
+/* src/Styles/Userdashboard.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full height */
+    background: linear-gradient(135deg, #154038ed, #9ed6caed); /* Soft light green gradient background */
+    padding: 30px; /* Increased padding for better spacing */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.title {
+    font-size: 2.5rem; /* Increased font size for title */
+    margin-bottom: 20px;
+    color: #effffbed; /* Darker green text for title */
+    font-weight: bold;
+    text-align: center; /* Center title */
+    letter-spacing: 1px; /* Slight letter spacing for elegance */
+}
+
+.alert {
+    color: #e21811; /* Softer red for error messages */
+    margin-bottom: 15px;
+    font-weight: bold;
+    background-color: white; /* Light background for alerts */
+    padding: 10px; /* Padding for alert */
+    border-radius: 5px; /* Rounded corners for alert */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.tableResponsive {
+    width: 100%;
+    overflow-x: auto; /* Allow horizontal scroll */
+    margin-bottom: 20px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse; /* Collapse borders */
+    background-color: #ffffff; /* White background for table */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Softer shadow for table */
+}
+
+.table th,
+.table td {
+    padding: 15px; /* Increased padding for better spacing */
+    border: 1px solid #dee2e6; /* Light gray border */
+    text-align: left;
+}
+
+.table th {
+    background-color: #0d4740; /* Soft green background for headers */
+    color: white; /* White text for headers */
+}
+
+.table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Slightly off-white for alternate rows */
+}
+
+.selectButton,
+.confirmButton,
+.toggleButton,
+.registerButton {
+    padding: 12px 15px; /* Increased padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transition for button background */
+    font-size: 1rem; /* Standard button font size */
+}
+
+.selectButton {
+    background-color: #0d4740; /* Standard green for select button */
+    color: white; /* White text */
+}
+
+.selectButton:hover {
+    background-color: #09b29e; /* Slightly darker green on hover */
+}
+
+.confirmButton {
+    background-color:#0d4740; /* Light green for confirm button */
+    color: white; /* White text */
+}
+
+.confirmButton:hover {
+    background-color:#09b29e ; /* Darker green on hover */
+}
+
+.toggleButton {
+    background-color: #0d4740; /* Gray for toggle button */
+    color: white; /* White text */
+    margin: 10px 0; /* Margin for separation */
+}
+
+.toggleButton:hover {
+    background-color: #0d3b36; /* Darker gray on hover */
+}
+
+.card {
+    background-color: #ffffff; /* White background for the card */
+    border-radius: 10px; /* Rounded corners for card */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    width: 100%;
+    max-width: 800px; /* Limit width */
+    margin: 20px 0; /* Margin for spacing */
+}
+
+.cardHeader {
+    text-align: center;
+    background-color: #0b4740; /* Soft green background for card header */
+    color: white; /* White text */
+    padding: 15px; /* Increased padding */
+    border-radius: 10px 10px 0 0; /* Round top corners */
+    font-size: 1.5rem; /* Larger font size for header */
+}
+
+.cardBody {
+    padding: 15px;
+}
+
+.select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 6px; /* Slightly larger border radius */
+    margin-bottom: 10px; /* Space below select */
+    transition: border-color 0.3s; /* Transition for border color */
+}
+
+.select:focus {
+    border-color: #4caf50; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+
