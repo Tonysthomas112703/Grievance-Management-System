@@ -1,7 +1,7 @@
 // src/components/UserDashboard.jsx
 import React, { useEffect, useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext'; 
-import './Styles/Userdashboard.css'
+import './Styles/UserDashboard.css'
 
 
 const UserDashboard = () => {
@@ -69,11 +69,11 @@ const UserDashboard = () => {
   }, [username]); // Depend on username to fetch grievances
 
   return (
-    <div className="container mt-5">
+    <div className="container">
       <h2 className="mb-4">User Dashboard</h2>
       <form onSubmit={handleSubmit} className="mb-4">
         
-        <div className="form-group">
+        <div className="formgroup">
         </div>
         <div className="form-group mt-3">
           <label>Type:</label>
@@ -96,7 +96,7 @@ const UserDashboard = () => {
           />
         
         </div>
-        <button type="submit" className="btn btn-primary mt-3">Create Grievance</button>
+        <button type="submit" className="btn">Create Grievance</button>
       </form>
       {message && <div className="alert alert-info">{message}</div>}
       <h3>Your Grievances</h3>

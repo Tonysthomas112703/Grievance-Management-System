@@ -1,90 +1,70 @@
-/* Styles/TechnicianDashboard.module.css */
-
 .container {
-    max-width: 600px; /* Limit the max width of the container */
-    margin: 0 auto; /* Center the container */
-    padding: 20px;
-    background: linear-gradient(135deg, #022e24ed, #3d907eed); /* Light background color */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    max-width: 600px; /* Increased width for a bigger form */
+    margin: 0 auto;
+    padding: 30px; /* Increased padding for better spacing */
+    background: linear-gradient(135deg, #9ed6caed, #154038ed); /* Emerald gradient background */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .title {
-    text-align: center; /* Center the title */
-    font-size: 24px; /* Increase font size for title */
-    margin-bottom: 20px; /* Space below the title */
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px; /* Increased font size */
+    font-weight: bold;
+    color: #011008; /* White text for title to contrast with gradient */
 }
 
-.alert {
-    margin-top: 20px; /* Space above the alert */
-    padding: 10px;
-    border-radius: 5px; /* Rounded corners for alerts */
-    color: #d9534f; /* Red color for error messages */
+.card {
+    background: linear-gradient(135deg, #9ed6caed, #154038ed);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.form {
-    margin-bottom: 20px; /* Space below the form */
+.cardBody {
+    padding: 20px;
 }
 
-.label {
-    font-weight: 600; /* Bold label text */
-    color: #456157; /* Darker color for better readability */
-    display: block; /* Make labels block elements */
-    margin-bottom: 5px; /* Space below the label */
+.formGroup {
+    margin-bottom: 20px; /* Increased margin for better spacing */
 }
 
-.input {
-    width: 100%; /* Full width for input fields */
-    padding: 10px; /* Padding inside input fields */
-    border: 1px solid #ccc; /* Default border color */
-    border-radius: 5px; /* Rounded corners */
-    margin-bottom: 15px; /* Space below input fields */
-    transition: border-color 0.3s ease; /* Smooth transition for focus effect */
+.formLabel {
+    display: block;
+    color: #014d38;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 18px; /* Larger font size for form labels */
 }
 
-.input:focus {
-    border-color: #00ff99; /* Blue border on focus */
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Add a light blue shadow on focus */
+.formControl {
+    width: 100%;
+    padding: 12px; /* Increased padding for larger form fields */
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Slightly more rounded corners */
+    font-size: 18px; /* Larger font size for form fields */
 }
 
 .submitButton {
-    background-color: #007bff; /* Custom blue color */
-    color: white; /* White text color */
-    border: none; /* Remove default border */
-    padding: 10px 15px; /* Padding inside the button */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    width: 100%;
+    padding: 12px;
+    background-color: #014d38;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px; /* Increased font size for the button */
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .submitButton:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #026550;
 }
 
-.select {
-    width: 100%; /* Full width for select elements */
-    padding: 10px; /* Padding inside select elements */
-    border: 1px solid #54cf8f; /* Default border color */
-    border-radius: 5px; /* Rounded corners */
-    margin-bottom: 15px; /* Space below select elements */
-}
-
-ul {
-    list-style-type: none; /* Remove bullet points from list */
-    padding: 0; /* Remove default padding */
-}
-
-li {
-    margin-bottom: 20px; /* Space below each grievance item */
-    padding: 15px; /* Padding inside list items */
-    border: 1px solid #ccc; /* Border around each grievance */
-    border-radius: 5px; /* Rounded corners for grievances */
-    background-color: #fff; /* White background for grievances */
-}
-
-/* Responsive adjustments */
-@media (max-width: 576px) {
-    .container {
-        padding: 10px; /* Reduce padding on smaller screens */
-    }
+.alertMessage {
+    margin-top: 20px;
+    color: #28a745;
+    text-align: center;
+    font-size: 18px; /* Larger font for alert messages */
 }

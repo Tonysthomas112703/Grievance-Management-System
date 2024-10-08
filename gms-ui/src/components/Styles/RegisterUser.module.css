@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh; /* Full height */
-  background: linear-gradient(135deg, #8db5aced, #9ed6caed); /* Emerald green gradient */
+  background: linear-gradient(135deg, #154038ed, #9ed6caed); /* Emerald green gradient */
   padding: 20px;
   border-radius: 12px; /* Softer corners */
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
@@ -48,7 +48,7 @@ label {
 
 .form-control {
   width: 100%;
-  padding: 12px;
+  padding: 25px;
   border: 1px solid #bdc3c7; /* Light gray border */
   border-radius: 6px;
   background-color: #f7f7f7; /* Soft, neutral background */

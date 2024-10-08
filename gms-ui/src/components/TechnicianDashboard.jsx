@@ -123,7 +123,7 @@ const TechnicianDashboard = () => {
         </form>
       ) : (
         <>
-          <h3>Your Grievances</h3>
+          <h3 className={styles.heading}>Your Grievances</h3>
           {grievances.length > 0 ? (
             <ul>
               {grievances.map((grievance) => (

@@ -39,7 +39,7 @@
   display: block; /* Block display */
   margin-bottom: 12px; /* Space below label */
   font-weight: 600; /* Bold font */
-  color: #054f38; /* Label color */
+  color: #03432f; /* Label color */
   font-size: 1.2rem; /* Font size */
 }
 
@@ -215,4 +215,11 @@ li:hover {
     font-size: 1rem; /* Smaller font size */
     padding: 15px; /* Less padding */
   }
+  .head{
+    color: #084e39;
+  }
+.heading{
+  color: #021b13;
+}
+  
 }
