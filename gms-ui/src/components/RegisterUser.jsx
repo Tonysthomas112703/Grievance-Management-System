@@ -40,12 +40,23 @@ const RegisterUser = () => {
         setMessage(`Error: ${errorData.message}`);
       }
     } catch (error) {
-      setMessage("An error occurred while registering the user.");
+      setMessage("UserName Already Exists Choose Another Username");
     }
+    
+
   };
 
   return (
     <div className="container ">
+       <img 
+        src="/Tech.png"// Reference the image in the public directory
+        alt="Logo" 
+        className="navLogo" 
+
+      
+      />
+      
+
       <h2 className="text-center">Register User</h2>
       <form onSubmit={handleSubmit} className="border p-4 shadow rounded">
         <div className="form-group">
@@ -72,7 +83,7 @@ const RegisterUser = () => {
           />
         </div>
 
-        <div className="form-group">
+        {/*<div className="form-group">
           <label>Role: </label>
           <select
             name="role"
@@ -81,16 +92,18 @@ const RegisterUser = () => {
             onChange={handleInputChange}
             required
           >
-            <option value="USER">User</option>
+            <option value="USER">User</option> 
+            
+            <option value="ASSIGNEE">Assignee</option> 
+ 
             
     
           </select>
-        </div>
-
+        </div> */}
         <button type="submit" className="btn btn-primary btn-block">Register</button>
       </form>
 
-      {message && <p className="text-center mt-3">{message}</p>}
+      {message && <p style={{ color:'#BD0F12', fontSize: '1.5rem', textAlign: 'center' }}>{message}</p>}
     </div>
   );
 };

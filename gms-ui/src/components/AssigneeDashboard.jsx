@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
 import styles from './Styles/AssigneeDashboard.module.css'; // Import your custom CSS module
+import Navbar from '../components/Navbar'; // Import Navbar
 
 const AssigneeDashboard = () => {
   const { authDetails } = useContext(AuthContext);
@@ -11,8 +11,6 @@ const AssigneeDashboard = () => {
   const [selectedTechnicianName, setSelectedTechnicianName] = useState('');
   const [selectedGrievanceId, setSelectedGrievanceId] = useState('');
   const [message, setMessage] = useState('');
-  const [showTechnicians, setShowTechnicians] = useState(false);
-  const navigate = useNavigate();
 
   // Fetch Unassigned Grievances
   const fetchUnassignedGrievances = async () => {
@@ -26,7 +24,6 @@ const AssigneeDashboard = () => {
       const data = await response.json();
       setUnassignedGrievances(data);
 
-      // Check if grievances are empty only after the data is fetched
       if (data.length === 0) {
         setMessage('No unassigned grievances left.');
       }
@@ -91,6 +88,7 @@ const AssigneeDashboard = () => {
 
   return (
     <div className={styles.container}>
+      <Navbar /> {/* Add the Navbar here */}
       <h2 className={styles.title}>Assignee Dashboard</h2>
       {message && <p className={styles.alert}>{message}</p>}
 
@@ -165,53 +163,6 @@ const AssigneeDashboard = () => {
           </button>
         </div>
       )}
-
-      {/* Button to toggle technician view */}
-      <button
-        className={styles.toggleButton}
-        onClick={() => setShowTechnicians(!showTechnicians)}
-      >
-        {showTechnicians ? 'Hide Technicians' : 'Show Technicians'}
-      </button>
-
-      {/* Conditional rendering of technician list */}
-      {showTechnicians && (
-        <div className={styles.card}>
-          <div className={styles.cardHeader}>
-            <h4>All Technicians</h4>
-          </div>
-          <div className={styles.cardBody}>
-            <table className={styles.table}>
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Username</th>
-                  <th>Expertise</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                {technicians.map((tech) => (
-                  <tr key={tech.id}>
-                    <td>{tech.id}</td>
-                    <td>{tech.username}</td>
-                    <td>{tech.expertise}</td>
-                    <td>{tech.status}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      )}
-
-      {/* Button for Technician Registration */}
-      <button
-        className={styles.registerButton}
-        onClick={() => navigate('/register-technician')}
-      >
-        Register Technician
-      </button>
     </div>
   );
 };

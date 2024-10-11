@@ -1,0 +1,61 @@
+/* Navbar.module.css */
+.navbar {
+  background: linear-gradient(135deg,  #154038ed,#9ed6caed); /* Gradient emerald green */
+  padding: 15px; /* Increased padding for a sleek look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 10px; /* Rounded corners */
+  display: flex; /* Make the navbar a flex container */
+  align-items: center; /* Vertically center the items */
+  justify-content: space-between; /* Space between logo and nav items */
+}
+
+.navLogo {
+  height: 100px; /* Adjust height as necessary */
+  margin-right: 20px; /* Space between logo and nav items */
+}
+
+.navList {
+  list-style-type: none; /* Remove bullet points */
+  display: flex; /* Display items in a row */
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  margin: 0 15px; /* Spacing between items */
+}
+
+.navLink {
+  color: rgb(23, 15, 15); /* Text color */
+  text-decoration: none; /* Remove underline from links */
+  font-weight: bold; /* Make the text bold */
+  font-size: 18px; /* Larger text for better readability */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for links */
+.navLink:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: #08462e; /* Change to light golden color */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Add active class for the current page */
+.navLink.active {
+  border-bottom: 3px solid #fffacd; /* Underline effect for active link */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack items on small screens */
+  }
+
+  .navList {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .navItem {
+    margin: 10px 0; /* Spacing between items in mobile view */
+  }
+}

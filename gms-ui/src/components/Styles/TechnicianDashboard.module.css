@@ -1,10 +1,10 @@
 /* Container */
 
 .container  {
-  max-width: 1100px; /* Adjusted width for consistency */
+  max-width: 1300px; /* Adjusted width for consistency */
   margin: auto; /* Centering the container properly */
   padding: 60px; /* Space around the content */
-  background: linear-gradient(135deg, #9ed6caed, #154038ed); /* Smooth emerald green gradient */
+  background: linear-gradient(135deg,  #154038ed,#9ed6caed); /* Smooth emerald green gradient */
   border-radius: 20px; /* Rounded corners */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Subtle shadow for elevation */
   transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transition effects */
@@ -21,7 +21,7 @@
   font-size: 2.5rem; /* Title size */
   margin-bottom: 40px; /* Space below the title */
   text-align: center; /* Centering the text */
-  color: #0e4a3ded; /* Title color */
+  color: #ffffffed; /* Title color */
   font-weight: 700; /* Bold font */
 }
 
@@ -39,7 +39,7 @@
   display: block; /* Block display */
   margin-bottom: 12px; /* Space below label */
   font-weight: 600; /* Bold font */
-  color: #03432f; /* Label color */
+  color: #f8fffd; /* Label color */
   font-size: 1.2rem; /* Font size */
 }
 
@@ -88,6 +88,7 @@
   box-shadow: 0 0 8px rgba(76, 175, 80, 0.5); /* Slight glow on focus */
 }
 
+
 /* Styles for the buttons */
 .submitButton {
   padding: 12px 20px; /* Add padding to the button */
@@ -131,13 +132,15 @@
 }
 
 .grievances {
-  border: 2px solid #128e79; /* Light gray border */
+  
+  border: 2px solid #128e7900; /* Light gray border */
   border-radius: 8px; /* Rounded corners */
   background-color: #70af95; /* Light background color */
-  padding: 15px; /* Padding inside the div */
+  padding: 10px; /* Padding inside the div */
   margin-bottom: 20px; /* Space below each grievance block */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
+
 
 .grievanceItem {
   margin-bottom: 10px; /* Space below each grievance item */
@@ -160,6 +163,12 @@
   font-size: 1.3rem; /* Font size */
   background-color: #45d1aa; /* Light greenish background */
   transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+.navLogo {
+  width: 210px; /* Set the width of the logo */
+  height: 250; /* Maintain aspect ratio */
+  margin-right: auto; /* Push the rest of the items to the right */
+  
 }
 
 /* Focus state for Technician ID */
@@ -218,6 +227,19 @@ li:hover {
   .head{
     color: #084e39;
   }
+
+
+  /* TechnicianDashboard.module.css */
+
+.alert {
+  color: rgb(252, 3, 3); /* Change to the desired color */
+  font-size: 1.2rem; /* Adjust the font size */
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Additional styles if needed */
+
 .heading{
   color: #021b13;
 }

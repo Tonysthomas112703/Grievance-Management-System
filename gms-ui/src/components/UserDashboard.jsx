@@ -1,8 +1,7 @@
 // src/components/UserDashboard.jsx
 import React, { useEffect, useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext'; 
-import './Styles/UserDashboard.css'
-
+import './Styles/UserDashboard.css';
 
 const UserDashboard = () => {
   const { authDetails } = useContext(AuthContext); // Get auth details from context
@@ -60,7 +59,7 @@ const UserDashboard = () => {
         setMessage(`Error: ${errorData.message}`);
       }
     } catch (error) {
-      setMessage('No Grievnaces to display.');
+      setMessage('No Grievances to display.');
     }
   };
 
@@ -70,21 +69,29 @@ const UserDashboard = () => {
 
   return (
     <div className="container">
+      <img 
+        src="/Tech.png" // Reference the image in the public directory
+        alt="Logo" 
+        className="navLogo" 
+      />
       <h2 className="mb-4">User Dashboard</h2>
       <form onSubmit={handleSubmit} className="mb-4">
-        
         <div className="formgroup">
         </div>
         <div className="form-group mt-3">
           <label>Type:</label>
-          <input
-            type="text"
+          <select
             name="type"
             className="form-control"
             value={formData.type}
             onChange={handleInputChange}
             required
-          />
+          >
+            <option value="">Select Type</option>
+            <option value="Mobile">Mobile</option>
+            <option value="Laptop">Laptop</option>
+          </select>
+
           <label>Description:</label>
           <input
             type="text"
@@ -94,7 +101,6 @@ const UserDashboard = () => {
             onChange={handleInputChange}
             required
           />
-        
         </div>
         <button type="submit" className="btn">Create Grievance</button>
       </form>

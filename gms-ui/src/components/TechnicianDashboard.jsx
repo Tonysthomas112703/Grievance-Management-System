@@ -27,7 +27,7 @@ const TechnicianDashboard = () => {
         const data = await response.json();
         setGrievances(data);
       } else {
-        setMessage('Error fetching grievances.');
+        setMessage('No Grievance Assigned');
       }
     } catch (error) {
       setMessage('An error occurred while fetching grievances.');
@@ -105,8 +105,34 @@ const TechnicianDashboard = () => {
 
   return (
     <div className={styles.container}>
+
+<img 
+        src="/Tech.png" // Reference the image in the public directory
+        alt="Logo" 
+        className={styles.navLogo} 
+      />
       <h2 className={styles.title}>Technician Dashboard</h2>
-      {message && <p className={styles.alert}>{message}</p>}
+      
+      {message && <p style={{ color:'#BD0F12', fontSize: '1.5rem', textAlign: 'center' }}>{message}</p>}
+
+
+      {/* Technician Status Update - Positioned at the top right */}
+      <div className={styles.statusUpdate}>
+        <h3>Update Technician Status</h3>
+        <select
+          value={technicianStatus}
+          onChange={(e) => setTechnicianStatus(e.target.value)}
+          className={styles.select}
+          required
+        >
+          <option value="">Select Status</option>
+          <option value="Available">Available</option>
+          <option value="Unavailable">Unavailable</option>
+        </select>
+        <button className={styles.submitButton} onClick={handleTechnicianStatusUpdate}>
+          Update Status
+        </button>
+      </div>
 
       {!hasEnteredId ? (
         <form onSubmit={handleTechnicianIdSubmit} className={styles.form}>
@@ -129,22 +155,22 @@ const TechnicianDashboard = () => {
               {grievances.map((grievance) => (
                 <li key={grievance.grievanceId}>
                   <div className={styles.grievances}>
-  <div className={styles.grievanceItem}>
-    <strong>Grievance ID:</strong> {grievance.grievanceId}
-  </div>
-  <div className={styles.grievanceItem}>
-    <strong>Description:</strong> {grievance.description}
-  </div>
-  <div className={styles.grievanceItem}>
-    <strong>Type:</strong> {grievance.type}
-  </div>
-  <div className={styles.grievanceItem}>
-    <strong>Status:</strong> {grievance.status}
-  </div>
-  <div className={styles.grievanceItem}>
-    <strong>Username:</strong> {grievance.username}
-  </div>
-</div>
+                    <div className={styles.grievanceItem}>
+                      <strong>Grievance ID:</strong> {grievance.grievanceId}
+                    </div>
+                    <div className={styles.grievanceItem}>
+                      <strong>Description:</strong> {grievance.description}
+                    </div>
+                    <div className={styles.grievanceItem}>
+                      <strong>Type:</strong> {grievance.type}
+                    </div>
+                    <div className={styles.grievanceItem}>
+                      <strong>Status:</strong> {grievance.status}
+                    </div>
+                    <div className={styles.grievanceItem}>
+                      <strong>Username:</strong> {grievance.username}
+                    </div>
+                  </div>
 
                   {/* Add other grievance fields as needed */}
                   <select
@@ -161,7 +187,7 @@ const TechnicianDashboard = () => {
                     <option value="CLOSED">Closed</option>
                   </select>
                   <button 
-                    className={styles.submitButton }
+                    className={styles.submitButton}
                     onClick={() => {
                       handleUpdateGrievanceStatus(grievance.grievanceId); // Update with grievance ID
                       setSelectedStatus(grievance.status); // Automatically select current status
@@ -175,21 +201,6 @@ const TechnicianDashboard = () => {
           ) : (
             <p>No grievances assigned yet.</p>
           )}
-
-          <h3>Update Technician Status</h3>
-          <select
-            value={technicianStatus}
-            onChange={(e) => setTechnicianStatus(e.target.value)}
-            className={styles.select}
-            required
-          >
-            <option value="">Select Status</option>
-            <option value="Available">Available</option>
-            <option value="Unavailable">Unavailable</option>
-          </select>
-          <button className={styles.submitButton} onClick={handleTechnicianStatusUpdate}>
-            Update Technician Status
-          </button>
         </>
       )}
     </div>

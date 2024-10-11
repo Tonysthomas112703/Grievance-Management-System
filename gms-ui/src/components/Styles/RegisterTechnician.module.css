@@ -1,0 +1,80 @@
+/* RegisterTechnician.module.css */
+
+.container {
+  width: 100%;
+    display: flex;               /* Use flexbox for centering */
+    flex-direction: column;      /* Stack elements vertically */
+    align-items: center;         /* Center items horizontally */
+         /* Center items vertically */
+    height: 100vh;               /* Full viewport height */
+    background: linear-gradient(135deg,  #154038ed,#9ed6caed); /* Emerald green gradient */
+    padding: 30px;              /* Padding around the container */
+  }
+  
+  .title {
+    font-size: 2rem;            /* Larger font size for the title */
+    color: rgb(227, 255, 247);               /* White text color for contrast */
+    margin-bottom: 20px;        /* Space below the title */
+  }
+  
+  .alert {
+    font-size: 1.5rem;
+    color: rgb(125, 2, 2);               /* White text color for alerts */
+    margin-bottom: 20px;        /* Space below the alert message */
+  }
+  
+  .form {
+    background: rgba(203, 220, 220, 0.125); /* Slightly transparent white background for the form */
+    border-radius: 10px;        /* Rounded corners for the form */
+    padding: 40px;              /* Padding inside the form */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    width: 500px;               /* Set a fixed width for the form */
+  }
+  
+  .inputGroup {
+    margin-bottom: 15px;        /* Space between input groups */
+  }
+  
+  label {
+    font-weight: bold;          /* Bold label text */
+    color: #121010;                /* Dark gray text color for labels */
+    display: block;             /* Block display for labels */
+    margin-bottom: 5px;         /* Space below the label */
+  }
+  
+  input {
+    width: 100%;                /* Full width for input fields */
+    padding: 10px;              /* Padding inside input fields */
+    border: 1px solid #cccccc61;     /* Light gray border */
+    border-radius: 5px;        /* Rounded corners for input fields */
+    font-size: 1rem;            /* Font size for input text */
+  }
+  
+  input:focus {
+    outline: none;              /* Remove default outline on focus */
+    border-color: #2ECC71;      /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(46, 204, 113, 0.5); /* Light shadow on focus */
+  }
+
+  .navLogo {
+    width: 210px; /* Set the width of the logo */
+    height: 250; /* Maintain aspect ratio */
+    margin-right: auto; /* Push the rest of the items to the right */
+    
+  }
+  
+  .submitButton {
+    background-color: #043619;  /* Button background color */
+    color: white;                /* White text color for the button */
+    border: none;                /* Remove default border */
+    border-radius: 5px;         /* Rounded corners for button */
+    padding: 10px;              /* Padding inside button */
+    font-size: 1rem;            /* Font size for button text */
+    cursor: pointer;             /* Pointer cursor on hover */
+    transition: background 0.3s; /* Smooth transition for background color */
+  }
+  
+  .submitButton:hover {
+    background-color: #27AE60;  /* Darker green on hover */
+  }
+  

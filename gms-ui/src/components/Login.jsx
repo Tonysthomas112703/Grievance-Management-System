@@ -6,7 +6,7 @@ import styles from './Styles/Login.module.css'; // Importing CSS module
 
 const Login = () => {
   const { setAuthDetails } = useContext(AuthContext);
-  const [credentials, setCredentials] = useState({ username: '', password: '', role: 'USER' });
+  const [credentials, setCredentials] = useState({ username: '', password: '' }); // Removed role from state
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
 
@@ -32,24 +32,25 @@ const Login = () => {
 
       if (response.ok) {
         const data = await response.json();
-        // Check if the role from the response matches the provided role
-        if (data.role !== credentials.role) {
-          setMessage('Role mismatch. Please check your role.');
-          return;
-        }
-
+        // Assuming the server returns the role along with username and other details
         setAuthDetails({ username: data.username, password: credentials.password, role: data.role });
-        
-        // Redirect based on role
-        if (data.role === 'USER') {
-          navigate('/user-dashboard');
-        } else if (data.role === 'ASSIGNEE') {
-          navigate('/assignee-dashboard');
-        } else if (data.role === 'TECHNICIAN') {
-          navigate('/technician-dashboard');
+
+        // Redirect based on role fetched from the server
+        switch (data.role) {
+          case 'USER':
+            navigate('/user-dashboard');
+            break;
+          case 'ASSIGNEE':
+            navigate('/assignee-dashboard');
+            break;
+          case 'TECHNICIAN':
+            navigate('/technician-dashboard');
+            break;
+          default:
+            setMessage('Role not recognized. Please contact support.');
         }
       } else {
-        setMessage('Invalid credentials, please try again.');
+        setMessage('Invalid credentials, Please  Register User and try again!! .');
       }
     } catch (error) {
       setMessage('An error occurred while logging in.');
@@ -62,6 +63,12 @@ const Login = () => {
 
   return (
     <div className={styles.container}>
+     <img 
+        src="/Tech.png"// Reference the image in the public directory
+        alt="Logo" 
+        className={styles.navLogo} 
+      />
+      
       <h2 className={styles.title}>Login</h2>
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.formGroup}>
@@ -85,20 +92,6 @@ const Login = () => {
             onChange={handleInputChange}
             required
           />
-        </div>
-        <div className={styles.formGroup}>
-          <label className={styles.label}>Role:</label>
-          <select
-            name="role"
-            className={styles.select}
-            value={credentials.role}
-            onChange={handleInputChange}
-            required
-          >
-            <option value="USER">USER</option>
-            <option value="ASSIGNEE">ASSIGNEE</option>
-            <option value="TECHNICIAN">TECHNICIAN</option>
-          </select>
         </div>
         <button type="submit" className={styles.submitButton}>Login</button>
         <button type="button" className={styles.registerButton} onClick={handleRegister}>Register</button>

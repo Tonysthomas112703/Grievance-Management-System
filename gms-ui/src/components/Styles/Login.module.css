@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  
   min-height: 100vh;
-  background: linear-gradient(135deg, #154038ed, #9ed6caed); /* Gradient with emerald green */
+  background: linear-gradient(135deg,  #154038ed,#9ed6caed); /* Gradient with emerald green */
   padding: 20px;
   border-radius: 12px; /* Softer corners */
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
@@ -22,7 +22,7 @@
 .form {
   width: 100%;
   max-width: 450px; /* Slightly larger form width */
-  background-color: #ffffff;
+  background-color: #ffffffc4;
   border-radius: 10px;
   padding: 35px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* More noticeable shadow */
@@ -35,6 +35,13 @@
 
 .formGroup {
   margin-bottom: 20px; /* Increased space between fields */
+  
+}
+.navLogo {
+  width: 210px; /* Set the width of the logo */
+  height: 250; /* Maintain aspect ratio */
+  margin-right: auto; /* Push the rest of the items to the right */
+  
 }
 
 .label {
@@ -75,18 +82,18 @@
 }
 
 .submitButton:hover {
-  background-color: #0c2b2c; /* Darker emerald green on hover */
+  background-color: #14493d; /* Darker emerald green on hover */
   transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 .registerButton {
-  background-color: #2e8371ed; /* Emerald green for register button */
+  background-color: #2e4d83ed; /* Emerald green for register button */
   color: white;
   margin-top: 12px;
 }
 
 .registerButton:hover {
-  background-color: #0c2b2c; /* Darker emerald green on hover */
+  background-color: #14386a; /* Darker emerald green on hover */
   transform: scale(1.05);
 }
 
